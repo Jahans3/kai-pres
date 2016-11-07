@@ -37,6 +37,7 @@
                                 <li>Data types</li>
                                 <li>Constructs</li>
                                 <li>Iterators and iterable constructs</li>
+                                <li>Conditionals</li>
                                 <li>Functions</li>
                                 <li>Programming for the web - Intro to JS</li>
                                 <li>Workshop</li>
@@ -177,6 +178,32 @@
                         Take the first number, divide by the second, and give the remainder
                         <br><br>
                         7 % 3 = 1
+                    </section>
+                    <section>
+                        Equal to: ==
+                        <br><br>
+                        5 == 5 = true;
+                    </section>
+                    <section>
+                        Equal to and of the same type: ===
+                        <br><br>
+                        5 === '5' = false;
+                        <br><br>
+                        Note that the second '5' here is in quotes, meaning it is a String, there it is a different type to 5, which is a Number
+                    </section>
+                    <section>
+                        Is not equal to: !=
+                        <br><br>
+                        5 != '5' = false;
+                        <br><br>
+                        Note that here we are not checking the type of the second 5, so it is inferred (coerced) into a Number type to check against the 5
+                    </section>
+                    <section>
+                        Is not equal to and not the same type: !==
+                        <br><br>
+                        5 !== '5' = true;
+                        <br><br>
+                        Here we do check the type, so "5 does not equal five AND is not the same type" results in true, because although both are 5, one is a type of String, while the other is a Number
                     </section>
                     <section>
                         Greater than: >
@@ -333,6 +360,26 @@
                     </section>
                     <section>
                         Another common construct is a function, more on these in a bit
+                    </section>
+                </section>
+                <section>
+                    Fundamentals: Conditionals
+                    <section>
+                        <div>A conditional is an evaluation based on the result of a given condition</div>
+                    </section>
+                    <section>
+                        <div>The most simple conditional is an if statement</div>
+                        <br><br>
+                        <div>If statements are blocks of code that are evaluated "if" the given condition is true</div>
+                    </section>
+                    <section>
+                        <div style="font-family: monospace; text-align: left">
+                            if (5 == 5) { <br><br>console.log('Wow, 5 really does equal 5!');<br><br> };
+                        </div>
+                        <br>
+                        <div style="font-family: monospace; text-align: left">
+                            Result: "Wow, 5 really does equal 5!"
+                        </div>
                     </section>
                 </section>
                 <section>
