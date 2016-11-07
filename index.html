@@ -24,8 +24,395 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>urmum 101</section>
+				<section>What we will cover:
+                    <section>
+                        <div>Fundamental primitives and constructs in programming</div>
+                        <div>
+                            <ul>
+                                <li>Under the hood</li>
+                                <li>Variables</li>
+                                <li>Data types</li>
+                                <li>Constructs</li>
+                                <li>Iterators and iterable constructs</li>
+                                <li>Functions</li>
+                                <li>How does this all relate to JavaScript? - Intro to JS</li>
+                                <li>Workshop</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <div>Week 2: Searching and sorting/algorithms</div>
+                        <div>
+                            <ul>
+                                <li>Discrete maths / set theory</li>
+                                <li>Conditional logic</li>
+                                <li>Iterative logic</li>
+                                <li>Advanced iteration</li>
+                                <li>Runtime complexity / big O notation</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <div>Week 3: Introduction to the web</div>
+                        <div>
+                            <ul>
+                                <li>REST</li>
+                                <li>HTTP</li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <div>Fundamentals: Under the Hood</div>
+                    <section>
+                        <div>
+                            <ul>
+                                <li>What is programming?</li>
+                                <li>From human-readable code to machine code</li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <div>Fundamentals: Under the Hood: What is programming?</div>
+                    <section>
+                        <div>Programming is simply writing out a series of instructions for a computer to carry out</div>
+                    </section>
+                    <section>
+                        <div>A programming language is a style of instruction targeted towards a specific runtime environment, eg. Java or Scala for the JVM</div>
+                    </section>
+                    <section>
+                        <div>Programming constructs are largely the same across all languages, with usually only syntactic differences</div>
+                    </section>
+                    <section>
+                        <img src="http://media02.hongkiat.com/programming-myth/programmer.jpg" alt="l33t_h4ck3r">
+                    </section>
+                </section>
+                <section>
+                    <div>Fundamentals: Under the Hood: From human-readable to machine code</div>
+                    <section>
+                        <div>It's easy to forget but the computer cannot understand the code you write</div>
+                    </section>
+                    <section>
+                        <div>For a computer to be able to understand what you are telling it to do, the code must go through a build process that transforms the code into machine code</div>
+                    </section>
+                    <section>
+                        <div>You won't need to know anything beyond the basics unless you go into advanced programming, but it is very useful to understand the process</div>
+                    </section>
+                    <section>
+                        <div>Compiled languages:</div>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>1. You write out some code in a text file</li>
+                            <li>2. The text files are read using a compiler specific to the language you used</li>
+                            <li>3. The compiler runs a parser that runs once over your code without executing any commands</li>
+                            <li>4. The source code (the code you wrote) is transformed into machine code</li>
+                            <li>5. The machine code can be executed by the computer to run the application</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <div>Interpreted languages:</div>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>1. You write out some code in a text file</li>
+                            <li>2. At the time of execution (not prior, like compiled languages) the code is read by a JIT (Just In Time) compiler, called an interpreter</li>
+                            <li>3. The interpreter first runs a parser, the parser runs once, and simply looks over the code without executing any commands</li>
+                            <li>4. The code will be transformed into something the engine running it can understand, usually bytecode</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <div>Programming languages follow standards set out by official specifications, there may be different compilers for the same language, but as long as they follow the spec correctly it will work</div>
+                        <br>
+                        <div>Eg. JavaScript runs on V8 in Chrome and Chakra in Edge</div>
+                    </section>
+                </section>
+                <section>
+                    <div>Fundamentals: Variables</div>
+                    <section>
+                        <div>Variables are programming constructs that hold data</div>
+                        <br>
+                        <div>There are different types of variables with different behaviours, but they all act as data stores</div>
+                    </section>
+                    <section>
+                        <div>Think algebra:</div>
+                        <br>
+                        <div>Where the variables A = 5 and B = 2, work out A * B</div>
+                    </section>
+                    <section>
+                        <div>To create a variable you must declare it, the following JavaScript example stores the word "Hello" to a variable called greeting</div>
+                        <br>
+                        <div class="mono">let greeting = 'Hello';</div>
+                    </section>
+                    <section>
+                        <div>The value of greeting can be accessed at any time:</div>
+                        <br>
+                        <div>console.log( ); - This tells the computer to print (log) the value of a given piece of data to the console (the matrixy thing/command line)</div>
+                        <br>
+                        <div>console.log(greeting); - Result: "Hello"</div>
+                    </section>
+                    <section>
+                        <div>The value of greeting can also be changed:</div>
+                        <br>
+                        <div>greeting = "Goodbye";</div>
+                        <br>
+                        <div>console.log(greeting); - Result: "Goodbye"</div>
+                        <br>
+                        <div>Note the lack of "let" because the variable has already been defined, and we are just changing the value</div>
+                    </section>
+                </section>
+                <section>
+                    <div>Fundamentals: Data Types</div>
+                    <section>
+                        <div>When dealing with data we must distinguish between data types, this is essential to programming</div>
+                    </section>
+                    <section>
+                        <div>A data type is a classification for the type of data which a variable will hold</div>
+                        <br>
+                        <div>There are many different data types</div>
+                    </section>
+                    <section>
+                        <div>Typed Languages</div>
+                        <div>
+                            <ul>
+                                <li>Author must explicitly declare the type of each variable</li>
+                                <li>Compiler will check no types are mixed or changed unintentionally</li>
+                                <li>To change the type of a variable the author must cast from one type to another</li>
+                                <li>Adds extra layer of safety - developer will catch errors before runtime</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <div>Interpreted Languages</div>
+                        <div>
+                            <ul>
+                                <li>Author does not explicitly set the data type, instead the interpreter infers it from the code</li>
+                                <li>More error-prone than type-safe languages</li>
+                                <li>Types can be changed on the fly</li>
+                                <li>eg. JavaScript</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        Data types take up different amount of data (typically):
+                        <ul>
+                            <li>Int: 2-4 bytes</li>
+                            <li>Float: 4 bytes</li>
+                            <li>Double: 8 bytes</li>
+                            <li>Long: 10 bytes</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <div>Types:</div>
+                        <br>
+                        <div>Types will vary slightly by language, but typically you will have:</div>
+                        <div>
+                            <ul>
+                                <li>Integer - A whole number</li>
+                                <li>Float - A number where the decimal can be anywhere in the number</li>
+                                <li>Double - A Float with twice the maximum value</li>
+                                <li>Boolean - One of two values: true or false</li>
+                                <li>String - A collection of characters, text</li>
+                                <li>Long, Char, Byte, and others for more advanced memory management and numerical reasons</li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    Fundamentals: Constructs
+                    <section>
+                        <div>A programming or data construct is a piece of data constructed of other, smaller types of data</div>
+                    </section>
+                    <section>
+                        <div>The first construct you will probably see will be an array, defined using square brackets []</div>
+                    </section>
+                    <section>
+                        <div>An array is an object that simply stores multiple pieces of a data in a sequence, with each data piece separated by a comma, here is one being assigned to the variable myArray:</div>
+                        <br>
+                        <div>
+                            let myArray = [5, 10, 15];
+                        </div>
+                    </section>
+                    <section>
+                        <div>Each piece of data in an array is called an element and is accessed by an index</div>
+                        <br>
+                        <div>let myArray = [5, 10, 15];</div>
+                        <br>
+                        <div>console.log(myArray[0]); - Result: 5</div>
+                        <br>
+                        <div>Important: In computer science, we begin counting at 0, so to access the first element of myArray we used 0.</div>
+                    </section>
+                    <section>
+                        <div>Another common construct is the Object, this is a tree of key:value pairs and is denoted using curly braces. Here is one being assigned to the variable myObject:</div>
+                        <br>
+                        <div style="text-align: left; width: 350px; margin: 0 auto">
+                            let myObject = { <br>
+                                propertyOne: 'value1', <br>
+                                propertyTwo: 500, <br>
+                            };
+                        </div>
+                    </section>
+                    <section>
+                        <div>To access the value of a property of an object use dot notation:</div>
+                        <br>
+                        <div>console.log(myObject.propertyOne); - Result: "value1"</div>
+                    </section>
+                    <section>
+                        Another common construct is a function, more on these in a bit
+                    </section>
+                </section>
+                <section>
+                    <div>Iterables and Iterable Constructs</div>
+                    <section>
+                        <div>As we saw, constructs contain multiple values, to access these values programmatically we must iterate over the construct</div>
+                    </section>
+                    <section>
+                        <div>For loops</div>
+                        <br>
+                        <div>A for loop executes the code contained within "for" the given amount of times</div>
+                        <br>
+                        <div>for (let i = 0; i < 5; i++) { console.log(i); } - Result: 0, 1, 2, 3, 4</div>
+                    </section>
+                    <section>
+                        <div>We can use the value in our loop to access values by their index:</div>
+                        <br>
+                        <div style="text-align: left; margin: 0 auto">let myArray = ['fuck', 'a', 'duck'];</div>
+                        <br>
+                        <div style="text-align: left; margin: 0 auto">for (let i = 0; i < myArray.length; i++) { <br> console.log(myArray[i]);
+                            <br>}
+                            <br>
+                            <br>Result: "fuck" "a" "duck"</div>
+                    </section>
+                    <section>
+                        Loops can take many forms, but they all follow the same fundamental principle of executing a block of code over and over
+
+                        <section>
+                            Other types of iterables:
+
+                            <div>
+                                <ul>
+                                    <li>while loop - keeps looping "while" a given condition is true</li>
+                                    <li>Iterable methods - functions belonging to specific objects designed to iterate over objects (usually of the type they are attached to)</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+                <section>
+                    Functions
+                    <section>
+                        Functions are essential to programming, they are conditional blocks of code that can be executed on-demand and with given parameters that will modify the result.
+                        <br> <br>
+                        It is the programming equivalent of "function machines" from school, where you give some numbers to the machine and it gives you something different back based on the given values
+                    </section>
+                    <section>
+                        <img src="http://transferready.co.uk/media/wysiwyg/blog-function-machines/machine-fn1.PNG"
+                             alt="Sexy function machine">
+                    </section>
+                    <section>
+                        Parameters are the arguments given to a function to be used by the function
+                    </section>
+                    <section>
+                        Take this function, myFunction, that accepts the argument "number" and adds 1, then prints it: <br> <br>
+
+                        <div style="text-align:left; font-family: monospace; margin-left: 150px;">function myFunction(number) {  <br>number = number + 1; <br> console.log(number);
+                            <br> };</div>
+                    </section>
+                    <section>
+                        Now if we call the function and pass in 7 as a result, what happens?
+                        <br> <br>
+                        Looking at our functions in mathematical terms can make it easier to understand:
+                        <br> <br>
+                        f(X) = X + 1
+                    </section>
+                    <section>
+                        <div style="text-align:left; font-family: monospace; margin-left: 150px;">f(7) = 7 + 1 = 8</div>
+                        <div style="text-align:left; font-family: monospace; margin-left: 150px;">myFunction(7); - Result: 8</div>
+                    </section>
+                </section>
+                <section>
+                    Programming for the web: JavaScript
+
+                    <section>
+                        JavaScript is:
+
+                        <br><br>
+                        <div>
+                            <ul>
+                                <li>Interpreted</li>
+                                <li>Loosely-typed, ie. you don't specify data types, the interpreter infers them</li>
+                                <li>Runs in the browser</li>
+                                <li>Has deep integration with browsers, allowing you do to do almost anything you want</li>
+                                <li>Follows the ECMAScript spec</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        JavaScript does not require you to specific data types when defining variables, but there are types of variable
+                        <br><br>
+                        const - declare a variable and do NOT allow the value to be changed, the value is "constant"<br>
+                        let - declare a variable that can be changed <br>
+                        var - has very specific use-cases, can forget about this one for now <br>
+                    </section>
+                    <section>
+                        Since JavaScript is loosely-typed, but you still need to be able to check types, they are broken down into simple categories:
+
+                        <br>
+                        <div>
+                            <ul>
+                                <li>Boolean - true/false</li>
+                                <li>String - text</li>
+                                <li>Number - numbers. In JavaScript this value is a number between +2^53 - 1 and -2^53 - 1</li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div>These categories are known as "primitives"</div>
+                    </section>
+                    <section>
+                        <div>
+                            <ul>
+                                <li><span style="font-family: monospace;">let myBoolean = true;</span></li>
+                                <li><span style="font-family: monospace;">let myString = 'Hello!';</span></li>
+                                <li><span style="font-family: monospace;">let myNumber = 42;</span></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        Functions in JavaScript are treated as first-class objects, meaning they can be stored in variables, passed a parameters to other functions, and are able to be treated like normal data types.
+                        <br><br>
+                        This is not true for a lot of languages, meaning you have more freedom when writing JS.
+                    </section>
+                    <section>
+                        Functions:
+                        <br><br>
+                        Declared using the "function" keyword, or the lambda symbol, "=>"
+                        <br>
+                        Different function declarations have different implications, for now we will focus on "function"
+                    </section>
+                    <section>
+                        Functions:
+                        <br>
+                        Declare a function by writing the keyword "function" followed by the function name, then brackets, if you want to pass parameters, you should define them in the brackets:
+                        <br><br>
+                        <div style="font-family: monospace; text-align: left;padding-left: 200px;">function sayHello(name){ <br> console.log(`Hello, ${name}!`); <br> };</div>
+                    </section>
+                    <section>
+                        Functions:
+                        <br>
+                        Call a function by writing out the name (known as a symbol) and putting brackets next to it, placing any parameters between the brackets:
+                        <br><br>
+                        <div style="font-family: monospace; text-align: left;padding-left: 200px;">sayHello('kai'); <br> Result: "Hello, kai!"</div>
+                    </section>
+                    <section>
+                        Functions:
+                        <br>
+                        Functions can be stored inside variables:
+                        <br><br>
+                        <div style="font-family: monospace; text-align: left;padding-left: 200px;">let sayHello = function (name){ <br> console.log(`Hello, ${name}!`); <br> };</div>
+                    </section>
+                </section>
 			</div>
 		</div>
 
