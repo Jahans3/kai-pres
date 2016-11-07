@@ -31,12 +31,14 @@
                         <div>
                             <ul>
                                 <li>Under the hood</li>
+                                <li>Terminating lines</li>
+                                <li>Operators</li>
                                 <li>Variables</li>
                                 <li>Data types</li>
                                 <li>Constructs</li>
                                 <li>Iterators and iterable constructs</li>
                                 <li>Functions</li>
-                                <li>How does this all relate to JavaScript? - Intro to JS</li>
+                                <li>Programming for the web - Intro to JS</li>
                                 <li>Workshop</li>
                             </ul>
                         </div>
@@ -127,6 +129,74 @@
                         <div>Programming languages follow standards set out by official specifications, there may be different compilers for the same language, but as long as they follow the spec correctly it will work</div>
                         <br>
                         <div>Eg. JavaScript runs on V8 in Chrome and Chakra in Edge</div>
+                    </section>
+                </section>
+                <section>
+                    Fundamentals: Terminating Lines
+
+                    <section>
+                        In the vast majority of languages you must terminate each line of code with a semi-colon, this is so the compiler knows where each line starts and ends.
+                    </section>
+                    <section>
+                        This is not true for JavaScript, but it is strongly recommended that you do use semi-colons, as there are some (albeit rare) cases where this can causes bugs.
+                    </section>
+                </section>
+                <section>
+                    <div>Fundamentals: Operators</div>
+                    <section>
+                        Operators are largely universal, with only slight differences between programming languages.
+                        <br><br>
+                        You probably know most of these already...
+                    </section>
+                    <section>
+                        Multiply: *
+                        <br>
+                        <br>
+                        5 * 5 = 25
+                    </section>
+                    <section>
+                        Subtract: -
+                        <br><br>
+                        10 - 5  = 5;
+                    </section>
+                    <section>
+                        Add: +
+                        <br><br>
+                        10 + 5 = 15;
+                        <br>
+                        1 + 1 = 3;
+                    </section>
+                    <section>
+                        Divide: /
+                        <br><br>
+                        10 / 5 = 2;
+                    </section>
+                    <section>
+                        Modulus: %
+                        <br><br>
+                        Take the first number, divide by the second, and give the remainder
+                        <br><br>
+                        7 % 3 = 1
+                    </section>
+                    <section>
+                        Greater than: >
+                        <br><br>
+                        5 > 6 = false;
+                    </section>
+                    <section>
+                        Lesser than: <
+                        <br><br>
+                        5 < 6 = true;
+                    </section>
+                    <section>
+                        Greater or equal to: >=
+                        <br><br>
+                        5 >= 5 = true;
+                    </section>
+                    <section>
+                        Lesser or equal to: <=
+                        <br><br>
+                        5 <= 6 = true;
                     </section>
                 </section>
                 <section>
@@ -242,7 +312,7 @@
                         <br>
                         <div>console.log(myArray[0]); - Result: 5</div>
                         <br>
-                        <div>Important: In computer science, we begin counting at 0, so to access the first element of myArray we used 0.</div>
+                        <div>Important: In computing terms, we begin counting at 0, so to access the first element of myArray we used 0.</div>
                     </section>
                     <section>
                         <div>Another common construct is the Object, this is a tree of key:value pairs and is denoted using curly braces. Here is one being assigned to the variable myObject:</div>
@@ -253,6 +323,8 @@
                                 propertyTwo: 500, <br>
                             };
                         </div>
+                        <br>
+                        <div>Think of each property as a variable, meaning you can assign any value you like to it.</div>
                     </section>
                     <section>
                         <div>To access the value of a property of an object use dot notation:</div>
@@ -295,6 +367,7 @@
                                 <ul>
                                     <li>while loop - keeps looping "while" a given condition is true</li>
                                     <li>Iterable methods - functions belonging to specific objects designed to iterate over objects (usually of the type they are attached to)</li>
+                                    <li>Recursive functions - recursion in maths is the repeated application of a procedure - exactly the same in computer science. This is a function that calls itself.</li>
                                 </ul>
                             </div>
                         </section>
@@ -303,9 +376,9 @@
                 <section>
                     Functions
                     <section>
-                        Functions are essential to programming, they are conditional blocks of code that can be executed on-demand and with given parameters that will modify the result.
+                        Functions are essential to programming, they are blocks of code that can be executed on-demand with given parameters that will modify the result.
                         <br> <br>
-                        It is the programming equivalent of "function machines" from school, where you give some numbers to the machine and it gives you something different back based on the given values
+                        It is the programming equivalent of "function machines" from school, where you give some numbers to the machine and it gives you something different back based on the given values, except where function machines have access to theoretical numbers, computational functions have access to the system they are running on
                     </section>
                     <section>
                         <img src="http://transferready.co.uk/media/wysiwyg/blog-function-machines/machine-fn1.PNG"
@@ -319,17 +392,28 @@
 
                         <div style="text-align:left; font-family: monospace; margin-left: 150px;">function myFunction(number) {  <br>number = number + 1; <br> console.log(number);
                             <br> };</div>
+                        <br>
+                        <div>                        Now if we call the function and pass in 7 as a result, what happens?
+                        </div>
                     </section>
                     <section>
-                        Now if we call the function and pass in 7 as a result, what happens?
-                        <br> <br>
-                        Looking at our functions in mathematical terms can make it easier to understand:
-                        <br> <br>
+                        Looking at our functions in mathematical terms can make it easier to understand...
+                    </section>
+                    <section>
+                        Where the JavaScript function myFunction:
+                        <br><br>
+                        <div style="text-align:left; font-family: monospace; margin-left: 150px; font-size: 24px;">function myFunction(number) {  <br>number = number + 1; <br> console.log(number);
+                            <br> };</div>
+                        <br><br>
+                        Is represented in mathematical notation (f of X) as:
+                        <br><br>
                         f(X) = X + 1
                     </section>
                     <section>
-                        <div style="text-align:left; font-family: monospace; margin-left: 150px;">f(7) = 7 + 1 = 8</div>
-                        <div style="text-align:left; font-family: monospace; margin-left: 150px;">myFunction(7); - Result: 8</div>
+                        Where X is 7, f of X evaluates to 8 in JavaScript just as it does in maths:
+                        <br><br>
+                        <div style="text-align:left; font-family: monospace; margin-left: 150px;">f(X) = 7 + 1 = 8</div>
+                        <div style="text-align:left; font-family: monospace; margin-left: 150px;">myFunction(X); - Result: 8</div>
                     </section>
                 </section>
                 <section>
@@ -346,11 +430,12 @@
                                 <li>Runs in the browser</li>
                                 <li>Has deep integration with browsers, allowing you do to do almost anything you want</li>
                                 <li>Follows the ECMAScript spec</li>
+                                <li>String and independent: don't need no man</li>
                             </ul>
                         </div>
                     </section>
                     <section>
-                        JavaScript does not require you to specific data types when defining variables, but there are types of variable
+                        JavaScript does not require you to specify data types when defining variables, but there are different types of variable
                         <br><br>
                         const - declare a variable and do NOT allow the value to be changed, the value is "constant"<br>
                         let - declare a variable that can be changed <br>
@@ -380,7 +465,7 @@
                         </div>
                     </section>
                     <section>
-                        Functions in JavaScript are treated as first-class objects, meaning they can be stored in variables, passed a parameters to other functions, and are able to be treated like normal data types.
+                        Functions in JavaScript are treated as first-class objects, meaning they can be stored in variables, passed as parameters to other functions, and are able to be treated like normal data types.
                         <br><br>
                         This is not true for a lot of languages, meaning you have more freedom when writing JS.
                     </section>
@@ -401,7 +486,7 @@
                     <section>
                         Functions:
                         <br>
-                        Call a function by writing out the name (known as a symbol) and putting brackets next to it, placing any parameters between the brackets:
+                        Execute (call) a function by writing out the name (known as a symbol) and putting brackets next to it, placing any parameters between the brackets:
                         <br><br>
                         <div style="font-family: monospace; text-align: left;padding-left: 200px;">sayHello('kai'); <br> Result: "Hello, kai!"</div>
                     </section>
@@ -411,6 +496,67 @@
                         Functions can be stored inside variables:
                         <br><br>
                         <div style="font-family: monospace; text-align: left;padding-left: 200px;">let sayHello = function (name){ <br> console.log(`Hello, ${name}!`); <br> };</div>
+                    </section>
+                </section>
+                <section>
+                    Workshop:
+
+                    <section>
+                        Please initiate the power on your device that sits on top of laps and open Chrome
+                    </section>
+                    <section>
+                        Warmup 1
+                        <br><br>
+                        Find the console
+                        <br><br>
+                        The console is essential for debugging JavaScript, in browsers you can even write JavaScript directly to the console!
+                        <br><br>
+                        Right click anywhere in your browser window, select "Inspect", then find the console
+                    </section>
+                    <section>
+                        Warmup 2
+                        <br><br>
+                        Use three of the universal operators
+                    </section>
+
+                    <section>
+                        Open files I sent u plz
+                        <br><br>
+                        Open index.html in Chrome
+                    </section>
+                    <section>
+                        Task 1
+                        <br><br>
+                        Using console.log() print the string "urmum, lmao #rekt" to the console
+                    </section>
+                    <section>
+                        Task 2
+                        <br><br>
+                        Declare three variables, a String, Number and Boolean, then print them
+                        <br><br>
+                        Tip: use "let" if you wish to be able to edit the value in future, otherwise use "const"
+                    </section>
+                    <section>
+                        Task 3
+                        <br><br>
+                        Using a for loop, print a sequence of numbers, from 1 all the way up to 10
+                    </section>
+                    <section>
+                        Task 4
+                        <br><br>
+                        Using your loop from task 3, wrap it inside a function, pass a name to the function to be printed out with each number
+                    </section>
+                    <section>
+                        Task 5
+                        <br><br>
+                        Using your function for task 4, make the name passed an array of 10 names and print a different name on each iteration of the for loop
+                    </section>
+                    <section>
+                        Homework
+                        <br><br>
+                        Using everything you've just learned, write a function that takes 2 arrays and iterates over each one separately, printing every OTHER element of each one
+                        <br><br>
+                        Bonus Josh points available for the most elegant solution
                     </section>
                 </section>
 			</div>
